@@ -1,0 +1,115 @@
+<head>
+	<script src="./chicles-pera.js"></script>
+	<style>
+		.content {
+			margin: 48px auto;
+			max-width: 1200px;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr minmax(400px, 500px);
+			align-items: stretch;
+		}
+
+		.cart {
+			padding: 12px 24px;
+			border-left: 1px solid #eee;
+		}
+
+		.cart-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 12px 24px;
+		}
+
+		.cart-row__info {
+			display: flex;
+			align-items: center;
+		}
+
+		.cart-row__info__units {
+			margin-right: 3px;
+		}
+
+		.cart-row strong {
+			font-size: 1.2em;
+		}
+
+		.cart-row img {
+			margin-right: 12px;
+			max-width: 120px;
+		}
+
+		.delivery {
+			padding: 12px;
+			margin-bottom: 12px;
+		}
+
+		.delivery label {
+			display: block;
+			margin-bottom: 3px;
+		}
+
+		.delivery input {
+			margin-right: 12px;
+		}
+
+		.total {
+			padding-top: 12px;
+			border-top: 1px solid #222;
+		}
+
+		.total strong {
+			font-size: 1.5em;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<div class="delivery">
+			<p>
+				Introduce el código zip para calcular los gastos de envío
+			</p>
+			<label for="zip-code">
+				Código zip
+			</label>
+			<input id="zip-code" type="text" placeholder="555333" />
+			<button id="calculate-delivery">
+				Calcular gastos de envío
+			</button>
+		</div>
+		<div class="cart">
+			<div class="cart-row">
+				<div class="cart-row__info">
+					<img src="./assets/chicle.jpg" alt="chicle de pera" />
+					<strong class="cart-row__info__units">
+						x1000
+					</strong>
+					unidades
+				</div>
+				<strong>
+					5€
+				</strong>
+			</div>
+			<div class="cart-row">
+				<div class="cart-row__info">
+					Gastos de envío
+				</div>
+				<strong id="delivery-cost">
+					-
+				</strong>
+			</div>
+			<div class="cart-row total">
+				<div class="cart-row__info">
+					Total
+				</div>
+				<strong id="total-price">
+					-
+				</strong>
+			</div>
+
+		</div>
+	</div>
+</body>
